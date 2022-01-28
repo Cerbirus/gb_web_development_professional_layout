@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson_1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header-global">
+        <!-- Видим, что все элементы имеют максимальную ширину - оборачиваем в контейнер -->
+        <!-- прописал в теге nav, не увидел зачем оборачивать отдельно -->
+        <!-- картинки меню являются декоративными, поэтому необходимо располагать в backgroung-image -->
+        <!-- не получилось корректно позиционирование сделать, НАВЕРНОЕ пришлось бы -->
+        <!-- делать display: block и задавать каждому элементу свои размеры -->
+        <nav class="menu container">
+            <ul class="menu-listing">
+                <li class="menu-item menu-item-logo">
+                    <a href="#" class="menu_logo disp_block">
+                        <img src="img/logo.svg" alt="Логотип">
+                    </a>
+                <li class="menu-item">
+                    <a href="#" class="menu_search disp_block">
+                        <img src="img/search.svg" alt="Логотип">
+                    </a>
+            </ul>
+            <ul class="menu-listing">
+                <li class="menu-item">
+                    <a href="#" class="menu_trigger disp_block">
+                        <img src="img/trigger.svg" alt="Логотип">
+                    </a>
+                <li class="menu-item">
+                    <a href="#" class="menu_user disp_block">
+                        <img src="img/user.svg" alt="Логотип">
+                    </a>
+                <li class="menu-item">
+                    <a href="#" class="menu_cart disp_block">
+                        <img src="img/cart.svg" alt="Логотип">
+                    </a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Не понятно как размещать article и section -->
+    <!-- Смотрю сайт для примера HM.ru и не понимаю как они используют эти 2 тега -->
+    <!-- main вообще содежит 2 div и все, т.е. вся страница постоена на  -->
+    <main>
+        <!-- Раздел с заголовком продукции и сайта в целом... -->
+        <section class="page-header">
+            <!-- Декоративная картинка, добавляем через background-image -->
+            <div class="page-header-img"></div>
+            <!-- Заголовок раздела, оборачиваем в header ??? -->
+            <header class="page-header-title">
+                <div class="page-header-title-icon background-color_brand_2"></div>
+                <!-- Определили основной дополнительный цвет сайта -->
+                <h1 class="page-header-txt">
+                    <span class="page-header-txt-1">THE&nbsp;BRAND</span> OF&nbsp;LUXERIOUS&nbsp;<span
+                        class="color_brand_2">FASHION</span> <!-- Определили основной дополнительный цвет сайта -->
+                </h1>
+            </header>
+        </section>
+
+        <!-- Раздел с категориями продукции -->
+        <section class="categories">
+            <!-- Видим, что все элементы имеют максимальную ширину - оборачиваем в контейнер -->
+            <div class="container">
+                <ul class="categories-listing">
+                    <li class="categories-item">
+                        <!-- Не знаю, надо ли оборачивать в div содержимое элемента списка? -->
+                        <a href="#" class="categories-item-link bg-img-for_women">
+                            <h3 class="categories-item-text">30%&nbsp;OFF<br>
+                                <span class="categories-item-header color_brand_2">FOR&nbsp;WOMEN</span>
+                            </h3>
+                        </a>
+
+                    <li class="categories-item">
+                        <!-- Не знаю, надо ли оборачивать в div содержимое элемента списка? -->
+                        <a href="#" class="categories-item-link bg-img-for_men">
+                            <h3 class="categories-item-text">HOT&nbsp;DEAL<br>
+                                <span class="categories-item-header color_brand_2">FOR&nbsp;MEN</span>
+                            </h3>
+                        </a>
+                    <li class="categories-item">
+                        <!-- Не знаю, надо ли оборачивать в div содержимое элемента списка? -->
+                        <a href="#" class="categories-item-link bg-img-for_kids">
+                            <h3 class="categories-item-text">NEW&nbsp;ARRIVALS<br>
+                                <span class="categories-item-header color_brand_2">FOR&nbsp;KIDS</span>
+                            </h3>
+                        </a>
+                    <li class="categories-item">
+                        <!-- Не знаю, надо ли оборачивать в div содержимое элемента списка? -->
+                        <a href="#" class="categories-item-link bg-img-for_accesories">
+                            <h3 class="categories-item-text">LUXIROUS&nbsp;&&nbsp;TRENDY<br>
+                                <span class="categories-item-header color_brand_2">ACCESORIES</span>
+                            </h3>
+                        </a>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Раздел с продукцией -->
+        <section class="products">
+            <div class="container">
+                <ul class="products-listing">
+                    <li class="products-item products-item-header">
+                        <header class="products-header">
+                            <h2 class="products-header-title">Fetured Items</h2>
+                            <p class="products-header-txt">Shop for items based on what we featured in this week</p>
+                        </header>
+                    </li>
+                    <li class="products-item">
+                        <article class="product-item-article">
+                            <div class="product-item-img-container  ">
+                                <a href="#" class="product-item-link">
+                                    <img src="img/product_1.png" alt="ELLERY X M'O CAPSULE" class="product-item-img">
+                                </a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-link product-item-details-header">
+                                    <h3>ELLERY X&nbsp;M&rsquo;O CAPSULE</h3>
+                                </a>
+                                <a href="#" class="product-item-link product-item-details-title">
+                                    <p class="text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian
+                                        arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                                </a>
+                                <a href="#" class="product-item-link color_brand_2 product-item-details-price">
+                                    $52.00
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="products-item">
+                        <article class="product-item-article">
+                            <div class="product-item-img-container  ">
+                                <a href="#" class="product-item-link">
+                                    <img src="img/product_2.png" alt="ELLERY X M'O CAPSULE" class="product-item-img">
+                                </a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-link product-item-details-header">
+                                    <h3>ELLERY X M'O CAPSULE</h3>
+                                </a>
+                                <a href="#" class="product-item-link product-item-details-title">
+                                    <p class="text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian
+                                        arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                                </a>
+                                <a href="#" class="product-item-link color_brand_2 product-item-details-price">
+                                    $52.00
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="products-item">
+                        <article class="product-item-article">
+                            <div class="product-item-img-container  ">
+                                <a href="#" class="product-item-link">
+                                    <img src="img/product_3.png" alt="ELLERY X M'O CAPSULE" class="product-item-img">
+                                </a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-link product-item-details-header">
+                                    <h3>ELLERY X M'O CAPSULE</h3>
+                                </a>
+                                <a href="#" class="product-item-link product-item-details-title">
+                                    <p class="text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian
+                                        arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                                </a>
+                                <a href="#" class="product-item-link color_brand_2 product-item-details-price">
+                                    $52.00
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="products-item">
+                        <article class="product-item-article">
+                            <div class="product-item-img-container  ">
+                                <a href="#" class="product-item-link">
+                                    <img src="img/product_4.png" alt="ELLERY X M'O CAPSULE" class="product-item-img">
+                                </a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-link product-item-details-header">
+                                    <h3>ELLERY X M'O CAPSULE</h3>
+                                </a>
+                                <a href="#" class="product-item-link product-item-details-title">
+                                    <p class="text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian
+                                        arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                                </a>
+                                <a href="#" class="product-item-link color_brand_2 product-item-details-price">
+                                    $52.00
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="products-item">
+                        <article class="product-item-article">
+                            <div class="product-item-img-container  ">
+                                <a href="#" class="product-item-link">
+                                    <img src="img/product_5.png" alt="ELLERY X M'O CAPSULE" class="product-item-img">
+                                </a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-link product-item-details-header">
+                                    <h3>ELLERY X M'O CAPSULE</h3>
+                                </a>
+                                <a href="#" class="product-item-link product-item-details-title">
+                                    <p class="text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian
+                                        arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                                </a>
+                                <a href="#" class="product-item-link color_brand_2 product-item-details-price">
+                                    $52.00
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="products-item">
+                        <article class="product-item-article">
+                            <div class="product-item-img-container  ">
+                                <a href="#" class="product-item-link">
+                                    <img src="img/product_6.png" alt="ELLERY X M'O CAPSULE" class="product-item-img">
+                                </a>
+                            </div>
+                            <div class="product-item-details">
+                                <a href="#" class="product-item-link product-item-details-header">
+                                    <h3>ELLERY X M'O CAPSULE</h3>
+                                </a>
+                                <a href="#" class="product-item-link product-item-details-title">
+                                    <p class="text">Known for her sculptural takes on&nbsp;traditional tailoring,
+                                        Australian
+                                        arbiter of&nbsp;cool Kym Ellery teams up&nbsp;with Moda Operandi.</p>
+                                </a>
+                                <a href="#" class="product-item-link color_brand_2 product-item-details-price">
+                                    $52.00
+                                </a>
+                            </div>
+                        </article>
+                    </li>
+
+                    <li class="products-item products-item-button">
+                        <!-- Как понять когда кнопку делать тегом button, а когда тегом a? -->
+                        <!-- Надо было так же включить вкнопку во флекс бокс? -->
+                        <a href="#" class="products-button-show-all color_brand_2">Browse All Product</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section></section>
+        <section></section>
+        <section></section>
+    </footer>
+
+</body>
+
+</html>

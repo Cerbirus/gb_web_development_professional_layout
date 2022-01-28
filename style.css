@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/* Затемнение блоков категорий */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Lato;
+  font-style: normal;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.disp_block {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.color_brand_2 {
+  color: #F16D7F;
+}
+
+.background-color_brand_2 {
+  background-color: #F16D7F;
+}
+
+.header-global {
+  width: 100%;
+  height: 75px;
+  background: #222222;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-listing {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-item {
+  /*   height: 38px;
+width: 38px; */
+  border: 0px solid black;
+  margin-right: 33px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.menu-item-logo {
+  margin-right: 41px;
+}
+
+.menu_search {
+  margin-right: 0px;
+}
+
+.menu_cart {
+  margin-right: 0px;
+}
+
+.page-header {
+  height: 764px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* align-items: center; */
+  border: 0px solid black;
+  background-color: #F1E4E6;
+}
+
+.page-header-img {
+  width: 50%;
+  height: 100%;
+  border: 0px solid black;
+  background-image: url("img/page-header-img-preview.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.page-header-title {
+  height: 93px;
+  border: 0px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  margin: 290px 0 0 64px;
+}
+
+.page-header-title-icon {
+  width: 12px;
+  height: 100%;
+  border: 0px solid black;
+  margin-right: 16px;
+}
+
+.page-header-txt {
+  width: 400px;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  margin: 0 0 0 0;
+}
+
+.page-header-txt-1 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+}
+
+.categories {
+  margin-top: 65px;
+}
+
+.categories-listing {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.categories-item {
+  /* Взял формулу с сайта HM.ru */
+  width: calc(100% / 3 - 30px - -20px / 3 - 0.01px);
+  border: 0px solid black;
+  margin: 0 0 30px 30px;
+  font-weight: normal;
+  /* Временное решение, пока не разберусь с размерами из background-image */
+  height: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bg-img-for_women {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url("img/categories-item-women-preview.png");
+  background: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url("img/categories-item-women-preview.png");
+  background-repeat: no-repeat;
+}
+
+.bg-img-for_men {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url("img/categories-item-men-preview.png");
+  background: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url("img/categories-item-men-preview.png");
+  background-repeat: no-repeat;
+}
+
+.bg-img-for_kids {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url("img/categories-item-kids-preview.png");
+  background: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url("img/categories-item-kids-preview.png");
+  background-repeat: no-repeat;
+}
+
+.bg-img-for_accesories {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(33, 22, 22, 0.7)), to(rgba(33, 22, 22, 0.7))), url("img/categories-item-accesories-preview.png");
+  background: linear-gradient(rgba(33, 22, 22, 0.7), rgba(33, 22, 22, 0.7)), url("img/categories-item-accesories-preview.png");
+  background-repeat: no-repeat;
+}
+
+.categories-item-link {
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Для отображения картинки background-image в поле html блока c динамическим расширением параметров блока*/
+  /* Нашел на сайте HM.ru, было сложно. В интернете не смог найти, пишут всякую ерунду */
+  /* НЕ ВЫШЛО :( Написал куратору, пока без ответа, делаю по запасному варианту через фиксацию размеров блока */
+  /* padding-top: 100%;
+    background-size: cover;
+    display: block;
+    content: ""; */
+}
+
+.categories-item:nth-child(1) {
+  margin: 0 0 30px 0;
+}
+
+.categories-item:nth-child(4) {
+  margin: 0;
+  width: 100%;
+  /* Временное решение, пока не разберусь с размерами из background-image */
+  height: 180px;
+}
+
+.categories-item-text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.categories-item-header {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+}
+
+.products {
+  margin-top: 96px;
+}
+
+.products-listing {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.products-item {
+  width: calc(100% / 3 - 42px - -42px / 3 - 0.01px);
+  border: 0px solid black;
+  margin: 0 0 30px 30px;
+  background-color: #F8F8F8;
+}
+
+.products-item-header {
+  margin: 0 0 48px 0;
+  width: 100%;
+  background-color: rgba(248, 248, 248, 0);
+}
+
+.products-item:nth-child(2), .products-item:nth-child(5) {
+  margin: 0 0 30px 0;
+}
+
+.products-button-show-all {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 15px 39px;
+  border: 1px solid #FF6A6A;
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+.products-item-button {
+  margin: 0 auto 0 auto;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(248, 248, 248, 0);
+}
+
+.product-item-img {
+  width: 100%;
+}
+
+.product-item-details {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: left;
+  margin: 25px 28px 20px 18px;
+}
+
+.product-item-link {
+  display: block;
+  text-decoration: none;
+}
+
+.product-item-details-header {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.product-item-details-title {
+  margin: 12.65px 0 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5D5D5D;
+}
+
+.product-item-details-price {
+  margin: 18px 0 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.products-header {
+  text-align: center;
+}
+
+.products-header-title {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+}
+
+.products-header-txt {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9F9F9F;
+}
+/*# sourceMappingURL=style.css.map */
