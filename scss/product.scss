@@ -1,0 +1,21 @@
+$brend_color: #f16d7f;
+$brend_color2: #6f6e6e;
+
+.product {
+    margin-bottom: 15px;
+    position: relative;
+
+    &-presentation {
+        height: 777px;
+        background-color: #f7f7f7;
+        border: 1px solid #eaeaea;
+    }
+
+    &-description {
+        height: 600px;
+        background-color: #fff;
+        position: relative;
+        top: -65px;
+        border: 1px solid #eaeaea;
+    }
+}
