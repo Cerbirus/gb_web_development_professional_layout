@@ -1057,7 +1057,7 @@
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  border: 0px solid #6df174 solid #f16de6;
+  border: 0px solid #f16de6;
 }
 
 .subscribe-info::before {
@@ -1115,7 +1115,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 0px solid #6df174 solid #f16de6;
+  border: 0px solid #f16de6;
 }
 
 .subscribe-form-title {

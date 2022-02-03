@@ -1007,7 +1007,7 @@ $brend_color2: #6f6e6e;
     align-items: flex-start;
     flex-wrap: wrap;
 
-    border: $border solid $border-color2;
+    border: $border2;
 
     &::before {
       content: "";
@@ -1051,7 +1051,7 @@ $brend_color2: #6f6e6e;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      border: $border solid $border-color2;
+      border: $border2;
     }
 
     &-title {
