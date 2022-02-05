@@ -1,0 +1,121 @@
+@charset "UTF-8";
+.product-presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  /*     &-label:before,
+    &-label:after {
+        color: white;
+        display: block;
+        position: absolute;
+        padding: 1rem;
+        font-size: 3rem;
+        height: 10rem;
+        vertical-align: middle;
+        line-height: 10rem;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+        cursor: pointer;
+    } */
+  /*    &-label:nth-of-type(1) {
+        z-index: 0;
+        display: block;
+    } */
+}
+
+.product-presentation-label {
+  -webkit-transition: -webkit-transform 400ms ease-out;
+  transition: -webkit-transform 400ms ease-out;
+  transition: transform 400ms ease-out;
+  transition: transform 400ms ease-out, -webkit-transform 400ms ease-out;
+  /* display: inline-block; */
+  display: none;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+  font-size: 3rem;
+  border: none;
+}
+
+.product-presentation-label img {
+  /* display: none; */
+  width: 100%;
+  /* position: absolute; */
+  border: none;
+}
+
+.product-presentation-form {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  white-space: nowrap;
+  border: none;
+}
+
+.product-presentation-input {
+  position: absolute;
+  border: none;
+}
+
+.product-presentation-label:before {
+  /* content: "\276D"; */
+  content: "Я КНОПКА 2";
+  right: 100%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  display: block;
+  background-color: green;
+  position: absolute;
+}
+
+.product-presentation-label:after {
+  /* content: "\276C"; */
+  content: "Я КНОПКА 1";
+  left: 100%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  display: block;
+  background-color: green;
+  position: absolute;
+}
+
+.product-presentation-input:nth-of-type(1):checked ~ .product-presentation-label:nth-of-type(1),
+.product-presentation-input:nth-of-type(2):checked ~ .product-presentation-label:nth-of-type(2),
+.product-presentation-input:nth-of-type(3):checked ~ .product-presentation-label:nth-of-type(3),
+.product-presentation-input:nth-of-type(4):checked ~ .product-presentation-label:nth-of-type(4) {
+  z-index: 0;
+  display: block;
+}
+
+.product-presentation-input:nth-of-type(1):checked ~ .product-presentation-label {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.product-presentation-input:nth-of-type(2):checked ~ .product-presentation-label {
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+.product-presentation-input:nth-of-type(3):checked ~ .product-presentation-label {
+  -webkit-transform: translate3d(-200%, 0, 0);
+          transform: translate3d(-200%, 0, 0);
+}
+
+.product-presentation-input:nth-of-type(4):checked ~ .product-presentation-label {
+  -webkit-transform: translate3d(-300%, 0, 0);
+          transform: translate3d(-300%, 0, 0);
+}
+/*# sourceMappingURL=carusel.css.map */

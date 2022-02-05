@@ -74,7 +74,7 @@
 }
 
 .filter:active {
-  background-color: fff;
+  background-color: #fff;
 }
 
 .filter:checked ~ .filter-list {
@@ -97,6 +97,7 @@
 .filter-list {
   display: none;
   visibility: hidden;
+  list-style: none;
   width: 360px;
   padding: 50px 20px 20px 20px;
   position: absolute;
@@ -110,9 +111,13 @@
 
 .filter-item {
   display: block;
-  list-style-type: none;
   margin-top: 18px;
   height: 100%;
+  list-style: none;
+}
+
+.filter-item-input {
+  display: none;
 }
 
 .filter-item label {
@@ -171,6 +176,7 @@
   visibility: hidden;
   height: 0px;
   margin-top: 24px;
+  list-style: none;
 }
 
 .filter-subitem {

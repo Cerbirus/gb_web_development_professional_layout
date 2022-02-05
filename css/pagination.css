@@ -26,12 +26,7 @@
   list-style-type: none;
 }
 
-.products-pagination-list span {
-  color: #c4c4c4;
-}
-
 .products-pagination-list-item {
-  color: #c4c4c4;
   padding: 12px 10px 12px 10px;
 }
 
@@ -40,12 +35,15 @@
 }
 
 .products-pagination-list-item a {
-  color: #c4c4c4;
   text-decoration: none;
-  width: 283.99px;
-  height: 44px;
-  left: 639px;
-  top: 2199px;
+}
+
+.products-pagination-list-item-ellipsis {
+  padding: 0px;
+}
+
+.products-pagination-list-item-txt {
+  color: #c4c4c4;
 }
 
 .products-pagination-list-item:first-child {
@@ -66,5 +64,17 @@
 
 .products-pagination-list-item:hover a {
   color: #f16d7f;
+}
+
+.products-pagination-list-item:active {
+  color: green;
+}
+
+.products-pagination-list-item:active svg {
+  fill: #f16d7f;
+}
+
+.products-pagination-list-item:active .products-pagination-list-item-txt {
+  color: green;
 }
 /*# sourceMappingURL=pagination.css.map */
