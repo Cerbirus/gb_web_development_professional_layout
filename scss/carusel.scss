@@ -5,104 +5,31 @@ $brend_color2: #6f6e6e;
     display: flex;
     justify-content: center;
     border: none;
-    &-label {
-        transition: transform 400ms ease-out;
-        /* display: inline-block; */
-        display: none;
-        min-height: 100%;
-        position: relative;
-        z-index: 1;
-        text-align: center;
-        width: 100%;
-        background-size: cover;
-        font-size: 3rem;
-        border: none;
 
-        & img {
-            /* display: none; */
-            width: 100%;
-            /* position: absolute; */
-            border: none;
+    &-btn {
+        width: auto;
+        &-icon {
+            background: rgba(42, 42, 42, 0.15);
+            width: 47px;
+            height: 47px;
+            display: flex;
+            align-items: center;
+            & svg {
+                width: 50%;
+                height: 50%;
+            }
+
+            &:hover {
+                & svg {
+                    fill: $brend_color;
+                }
+            }
+
+            &:active {
+                & svg {
+                    fill: #fff;
+                }
+            }
         }
-    }
-
-    &-form {
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        white-space: nowrap;
-        border: none;
-    }
-    &-input {
-        position: absolute;
-        border: none;
-    }
-
-    /*     &-label:before,
-    &-label:after {
-        color: white;
-        display: block;
-        position: absolute;
-        padding: 1rem;
-        font-size: 3rem;
-        height: 10rem;
-        vertical-align: middle;
-        line-height: 10rem;
-        top: 50%;
-        transform: translate3d(0, -50%, 0);
-        cursor: pointer;
-    } */
-
-    &-label:before {
-        /* content: "\276D"; */
-        content: "Я КНОПКА 2";
-        right: 100%;
-        border-top-left-radius: 50%;
-        border-bottom-left-radius: 50%;
-
-        display: block;
-        background-color: green;
-        position: absolute;
-    }
-
-    &-label:after {
-        /* content: "\276C"; */
-        content: "Я КНОПКА 1";
-        left: 100%;
-        border-top-right-radius: 50%;
-        border-bottom-right-radius: 50%;
-
-        display: block;
-        background-color: green;
-        position: absolute;
-    }
-
-    /*    &-label:nth-of-type(1) {
-        z-index: 0;
-        display: block;
-    } */
-
-    &-input:nth-of-type(1):checked ~ &-label:nth-of-type(1),
-    &-input:nth-of-type(2):checked ~ &-label:nth-of-type(2),
-    &-input:nth-of-type(3):checked ~ &-label:nth-of-type(3),
-    &-input:nth-of-type(4):checked ~ &-label:nth-of-type(4) {
-        z-index: 0;
-        display: block;
-    }
-
-    &-input:nth-of-type(1):checked ~ &-label {
-        transform: translate3d(0, 0, 0);
-    }
-
-    &-input:nth-of-type(2):checked ~ &-label {
-        transform: translate3d(-100%, 0, 0);
-    }
-
-    &-input:nth-of-type(3):checked ~ &-label {
-        transform: translate3d(-200%, 0, 0);
-    }
-
-    &-input:nth-of-type(4):checked ~ &-label {
-        transform: translate3d(-300%, 0, 0);
     }
 }

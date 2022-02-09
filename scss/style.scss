@@ -21,7 +21,7 @@ $brend_color2: #6f6e6e;
   @at-root {
     @font-face {
       font-family: "Lato";
-      src: url("../fonts/Lato/Lato-Regular.ttf");
+      src: url("../fonts/Lato/Lato-Light.ttf");
       font-weight: normal;
       font-style: normal;
     }
@@ -49,6 +49,10 @@ $brend_color2: #6f6e6e;
       color: $brend_color;
     }
 
+    .color_txt_property {
+      color: $brend_color2;
+    }
+
     .background-color_brand_2 {
       background-color: $brend_color;
     }
@@ -70,6 +74,17 @@ $brend_color2: #6f6e6e;
 
     .txt-uppercase {
       text-transform: uppercase;
+    }
+
+    .df-row-sb {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .df-col-sb {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 }
@@ -1229,3 +1244,137 @@ $brend_color2: #6f6e6e;
 @import "filter.scss";
 @import "pagination.scss";
 @import "product.scss";
+@import "carusel.scss";
+@import "cart.scss";
+
+.registration {
+  display: flex;
+  margin-top: 64px;
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    margin-right: 128px;
+
+    &-name {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 33px;
+    }
+
+    &-login {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 39px;
+    }
+
+    &-loyalty {
+      display: flex;
+      flex-direction: column;
+
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 29px;
+
+      &-header {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      & h2,
+      span {
+        margin-bottom: 22px;
+      }
+    }
+
+    &-header {
+      margin-bottom: 20px;
+
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+
+      color: #222222;
+    }
+
+    &-input {
+      margin-bottom: 20px;
+      min-width: 360px;
+      height: 45px;
+      padding-left: 17px;
+      border: 1px solid #a4a4a4;
+
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 16px;
+
+      &::placeholder {
+        color: #b1b1b1;
+      }
+    }
+
+    &-annotation {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 16px;
+
+      color: #b1b1b1;
+    }
+
+    &-list {
+      list-style-type: none;
+      &-item {
+        display: flex;
+        align-items: center;
+        margin: 0 0 16px 0;
+        &::before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 16px;
+          background-image: url("../img/Vector.svg");
+          margin-right: 22px;
+        }
+      }
+    }
+    &-radiobtn {
+      margin: 11px 0 0 0;
+
+      font-family: Lato;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 13px;
+    }
+
+    &-btn {
+      width: 167px;
+      border: 0px;
+      background: $brend_color;
+      padding: 16px 30px;
+
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      /* identical to box height */
+
+      color: #ffffff;
+    }
+  }
+}

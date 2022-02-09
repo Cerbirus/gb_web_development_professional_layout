@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lesson_5: index</title>
+    <title>lesson_6: index</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,8 +16,6 @@
         <!-- Видим, что все элементы имеют максимальную ширину - оборачиваем в контейнер -->
         <!-- прописал в теге nav, не увидел зачем оборачивать отдельно -->
         <!-- картинки меню являются декоративными, поэтому необходимо располагать в backgroung-image -->
-        <!-- не получилось корректно позиционирование сделать, НАВЕРНОЕ пришлось бы -->
-        <!-- делать display: block и задавать каждому элементу свои размеры -->
         <div class="menu container">
             <ul class="menu-listing">
                 <li class="menu-item menu-item-logo">
@@ -122,15 +120,8 @@
                         </ul>
                     </nav>
 
-
-
-
-
-
-
-
                 <li class="menu-item">
-                    <button class="menu_user menu-item-btn disp_block">
+                    <button class="menu_user menu-item-btn disp_block" onclick="location.href='registration.html';">
                         <svg class="menu-svg-icon" width="29" height="29" viewBox="0 0 29 29"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -138,7 +129,7 @@
                         </svg>
                     </button>
                 <li class="menu-item">
-                    <button class="menu-cart menu-item-btn disp_block">
+                    <button class="menu-cart menu-item-btn disp_block" onclick="location.href='cart.html';">
                         <svg class="menu-svg-icon" width="32" height="29" viewBox="0 0 32 29"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
