@@ -62,6 +62,26 @@
   text-transform: uppercase;
 }
 
+.df-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.df-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .df-row-sb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,6 +108,23 @@
           justify-content: space-between;
 }
 
+.df-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.df-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.df-jc-sa {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 /* === Начало: === header === */
 .header-global {
   width: 100%;
@@ -108,6 +145,47 @@
   /* Кнопка поиска */
   /* Кнопка корзины */
   /* Начало: Кнопка меню, выпадающий список */
+  /* &-btn {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+
+     &:hover {
+      svg,
+      svg::before,
+      svg::after {
+        fill: orange;
+      }
+    }
+
+    &:active {
+      & svg,
+      & svg::before,
+      & svg::after {
+        fill: red;
+      }
+    }
+
+    & svg {
+      &:before,
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        position: absolute;
+        top: -10px;
+        left: 0;
+      }
+
+      &:after {
+        top: 10px;
+      }
+    }
+  } */
   /* Конец: Кнопка меню, выпадающий список */
 }
 
@@ -145,16 +223,20 @@
   margin-right: 41px;
 }
 
+.menu-item:hover svg {
+  fill: orange;
+}
+
+.menu-item:active svg {
+  fill: red;
+}
+
 .menu-search-form {
   border: 0px solid #6df174;
   /* Мне пока непонятно зачем задавать фикс размеры */
   width: 26px;
   min-height: 26px;
   position: relative;
-}
-
-.menu-search-form:hover svg {
-  fill: orange;
 }
 
 .menu-search-btn {
@@ -198,14 +280,6 @@
   fill: red;
 }
 
-.menu-cart:hover svg {
-  fill: orange;
-}
-
-.menu-cart:active svg {
-  fill: red;
-}
-
 .menu-cart-txt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,47 +297,6 @@
   position: absolute;
   top: -8px;
   right: -10px;
-}
-
-.menu-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 32px;
-  height: 32px;
-}
-
-.menu-btn:hover svg,
-.menu-btn:hover svg::before,
-.menu-btn:hover svg::after {
-  fill: orange;
-}
-
-.menu-btn:active svg,
-.menu-btn:active svg::before,
-.menu-btn:active svg::after {
-  fill: red;
-}
-
-.menu-btn svg:before, .menu-btn svg:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #fff;
-  position: absolute;
-  top: -10px;
-  left: 0;
-}
-
-.menu-btn svg:after {
-  top: 10px;
 }
 
 .menu-switch {
@@ -287,7 +320,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
-  list-style: none;
   position: absolute;
   top: 75px;
   /* значение в свойстве top удобно задать через переменную равную высоте первого блока */
@@ -327,6 +359,11 @@
   font-weight: bold;
   color: #000000;
   text-transform: uppercase;
+}
+
+.menu-list-listing {
+  display: block;
+  list-style: none;
 }
 
 .menu-list-item:hover > a {
@@ -619,6 +656,12 @@
 
 .products {
   margin-top: 51px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
 }
 
 .products-listing {
@@ -709,14 +752,16 @@
   margin: 25px 28px 20px 18px;
 }
 
-.products-item-details-header {
+.products-item-details-header,
+.products-item-details h3 {
   font-weight: normal;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
 }
 
-.products-item-details-title {
+.products-item-details-title,
+.products-item-details p {
   margin: 12.65px 0 0;
   font-weight: 300;
   font-size: 14px;
@@ -724,7 +769,8 @@
   color: #5d5d5d;
 }
 
-.products-item-details-price {
+.products-item-details-price,
+.products-item-details a {
   margin: 18px 0 0;
   font-weight: normal;
   font-size: 16px;
@@ -2137,7 +2183,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   margin-right: 128px;
 }
 
@@ -2205,7 +2252,6 @@
 
 .registration-form-input {
   margin-bottom: 20px;
-  min-width: 360px;
   height: 45px;
   padding-left: 17px;
   border: 1px solid #a4a4a4;
@@ -2278,6 +2324,12 @@
   border: 0px;
   background: #f16d7f;
   padding: 16px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
@@ -2285,5 +2337,37 @@
   line-height: 17px;
   /* identical to box height */
   color: #ffffff;
+  position: relative;
+}
+
+.vector {
+  position: relative;
+  margin-left: 20px;
+}
+
+.vector::before {
+  content: "";
+  display: block;
+  height: 0px;
+  width: 16.29px;
+  border-top: 1.5px solid #fff;
+  background-color: transparent;
+  position: absolute;
+}
+
+.vector::after {
+  content: "";
+  display: block;
+  border-top: 1.5px solid #fff;
+  border-right: 1.5px solid #fff;
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  top: -4px;
+  left: 6px;
+  border-radius: 1px;
 }
 /*# sourceMappingURL=style.css.map */

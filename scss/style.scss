@@ -76,6 +76,14 @@ $brend_color2: #6f6e6e;
       text-transform: uppercase;
     }
 
+    .df-row {
+      display: flex;
+      flex-direction: row;
+    }
+    .df-col {
+      display: flex;
+      flex-direction: column;
+    }
     .df-row-sb {
       display: flex;
       flex-direction: row;
@@ -85,6 +93,15 @@ $brend_color2: #6f6e6e;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+    .df-jc-sb {
+      justify-content: space-between;
+    }
+    .df-jc-c {
+      justify-content: center;
+    }
+    .df-jc-sa {
+      justify-content: space-around;
     }
   }
 }
@@ -130,6 +147,14 @@ $brend_color2: #6f6e6e;
     &-logo {
       margin-right: 41px;
     }
+
+    &:hover svg {
+      fill: orange;
+    }
+
+    &:active svg {
+      fill: red;
+    }
   }
 
   /* Кнопка поиска */
@@ -142,10 +167,6 @@ $brend_color2: #6f6e6e;
       min-height: 26px;
 
       position: relative;
-
-      &:hover svg {
-        fill: orange;
-      }
     }
 
     &-btn {
@@ -191,14 +212,6 @@ $brend_color2: #6f6e6e;
 
   /* Кнопка корзины */
   &-cart {
-    &:hover svg {
-      fill: orange;
-    }
-
-    &:active svg {
-      fill: red;
-    }
-
     &-txt {
       display: flex;
       justify-content: center;
@@ -214,14 +227,14 @@ $brend_color2: #6f6e6e;
   }
 
   /* Начало: Кнопка меню, выпадающий список */
-  &-btn {
-    display: flex;
+  /* &-btn {
+        display: flex;
     justify-content: center;
     align-items: center;
     width: 32px;
     height: 32px;
 
-    &:hover {
+     &:hover {
       svg,
       svg::before,
       svg::after {
@@ -254,7 +267,7 @@ $brend_color2: #6f6e6e;
         top: 10px;
       }
     }
-  }
+  } */
 
   &-switch {
     display: none;
@@ -276,7 +289,6 @@ $brend_color2: #6f6e6e;
     padding: 16px 33px;
     box-sizing: border-box;
     background-color: #fff;
-    list-style: none;
 
     position: absolute;
     top: 75px;
@@ -317,6 +329,11 @@ $brend_color2: #6f6e6e;
       font-weight: bold;
       color: #000000;
       text-transform: uppercase;
+    }
+
+    &-listing {
+      display: block;
+      list-style: none;
     }
 
     &-item {
@@ -599,6 +616,13 @@ $brend_color2: #6f6e6e;
 .products {
   margin-top: 51px;
 
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 16px;
+  color: #000000;
+
   &-listing {
     list-style-type: none;
     display: flex;
@@ -680,14 +704,16 @@ $brend_color2: #6f6e6e;
       text-align: left;
       margin: 25px 28px 20px 18px;
 
-      &-header {
+      &-header,
+      & h3 {
         font-weight: normal;
         font-size: 13px;
         line-height: 16px;
         color: #000000;
       }
 
-      &-title {
+      &-title,
+      & p {
         margin: 12.65px 0 0;
         font-weight: 300;
         font-size: 14px;
@@ -695,7 +721,8 @@ $brend_color2: #6f6e6e;
         color: #5d5d5d;
       }
 
-      &-price {
+      &-price,
+      & a {
         margin: 18px 0 0;
         font-weight: normal;
         font-size: 16px;
@@ -1255,7 +1282,8 @@ $brend_color2: #6f6e6e;
   &-form {
     display: flex;
     flex-direction: column;
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     margin-right: 128px;
 
     &-name {
@@ -1310,7 +1338,6 @@ $brend_color2: #6f6e6e;
 
     &-input {
       margin-bottom: 20px;
-      min-width: 360px;
       height: 45px;
       padding-left: 17px;
       border: 1px solid #a4a4a4;
@@ -1367,6 +1394,8 @@ $brend_color2: #6f6e6e;
       border: 0px;
       background: $brend_color;
       padding: 16px 30px;
+      display: flex;
+      align-items: center;
 
       font-family: Lato;
       font-style: normal;
@@ -1376,6 +1405,37 @@ $brend_color2: #6f6e6e;
       /* identical to box height */
 
       color: #ffffff;
+      position: relative;
     }
+  }
+}
+
+.vector {
+  position: relative;
+  margin-left: 20px;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 0px;
+    width: 16.29px;
+    border-top: 1.5px solid #fff;
+    background-color: transparent;
+    position: absolute;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    border-top: 1.5px solid #fff;
+    border-right: 1.5px solid #fff;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -4px;
+    left: 6px;
+    border-radius: 1px;
   }
 }
