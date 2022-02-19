@@ -1400,38 +1400,6 @@ ul {
       flex-direction: row;
       justify-content: space-around;
     }
-
-    &-item {
-      height: 180px;
-      margin-bottom: 32px;
-
-      &-details {
-        margin: 13px 10px 0 17px;
-      }
-
-      &-header {
-        padding-bottom: 26px;
-
-        font-size: 16px;
-        line-height: 19px;
-      }
-
-      & .property {
-        font-size: 14px;
-        line-height: 17px;
-
-        & span {
-          margin-bottom: 4px;
-        }
-
-        & .quantity input {
-          max-width: 15px;
-          margin-left: 15px;
-          font-size: 10px;
-          line-height: 12px;
-        }
-      }
-    }
   }
 
   .categories-item {
@@ -1475,6 +1443,25 @@ ul {
   }
   .subscribe-form-title {
     margin: 0;
+  }
+
+  .registration {
+    margin-top: 40px;
+    &-form {
+      margin-right: 24px;
+
+      &-loyalty {
+        margin-bottom: 32px;
+
+        font-size: 16px;
+        line-height: 19px;
+
+        &-header {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+    }
   }
 }
 
@@ -1596,14 +1583,68 @@ ul {
     margin-bottom: 48px;
   }
 
-  .filter ~ label svg {
-    width: 37.5px;
-    height: 25px;
-  }
+  .products-cart {
+    & .checkout {
+      flex-direction: row;
 
-  .filter ~ label span {
-    visibility: hidden;
-    position: absolute;
+      & .checkout-adress-header {
+        max-width: 100%;
+        width: 100%;
+      }
+      & .checkout-adress {
+        width: 100%;
+        margin-bottom: 28px;
+      }
+      & .checkout-confirm {
+        width: 100%;
+        margin-left: 0px;
+        max-height: 214px;
+        height: 100%;
+      }
+    }
+
+    &-left {
+      margin-bottom: 48px;
+    }
+
+    &-right {
+    }
+
+    &-btns {
+      justify-content: space-between;
+    }
+
+    &-item {
+      height: 180px;
+      margin-bottom: 32px;
+
+      &-details {
+        margin: 13px 10px 0 17px;
+      }
+
+      &-header {
+        padding-bottom: 26px;
+
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      & .property {
+        font-size: 14px;
+        line-height: 17px;
+
+        & span {
+          margin-bottom: 4px;
+        }
+
+        & .quantity input {
+          max-width: 15px;
+          margin-left: 15px;
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
   }
 
   .products-item:nth-child(1),
@@ -1613,6 +1654,16 @@ ul {
   .products-item:nth-child(9),
   .products-item:nth-child(11) {
     margin: 0 0 16px 0;
+  }
+
+  .filter ~ label svg {
+    width: 37.5px;
+    height: 25px;
+  }
+
+  .filter ~ label span {
+    visibility: hidden;
+    position: absolute;
   }
 
   .features {
@@ -1645,5 +1696,14 @@ ul {
 
   .page-footer-socials {
     margin-bottom: 40px;
+  }
+
+  .registration {
+    flex-direction: column;
+
+    &-form {
+      margin-right: 0px;
+      margin-bottom: 40px;
+    }
   }
 }
