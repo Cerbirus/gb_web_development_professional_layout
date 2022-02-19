@@ -9,6 +9,7 @@
 }
 
 .products-header-inlineflex {
+  width: 100%;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -16,6 +17,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .products-header-filter {
@@ -30,7 +34,8 @@
 
 .products-header-filter form {
   display: block;
-  width: 395px;
+  max-width: 395px;
+  width: 100%;
   z-index: 50;
   /* не получается поднять над другими элементами */
   float: right;
@@ -98,7 +103,12 @@
   display: none;
   visibility: hidden;
   list-style: none;
-  width: 360px;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  max-width: 360px;
+  width: 100%;
+  margin-left: 8px;
   padding: 50px 20px 20px 20px;
   position: absolute;
   top: -20px;

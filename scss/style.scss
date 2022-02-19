@@ -17,6 +17,26 @@ $brend_color2: #6f6e6e;
   font-style: normal;
 }
 
+/* === Начало: ===  Обнуление ненужных стиле bootstap ===  */
+dl,
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  padding-left: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+/* === Конец: ===  Обнуление ненужных стиле bootstap ===  */
+
 .basic {
   @at-root {
     @font-face {
@@ -227,47 +247,6 @@ $brend_color2: #6f6e6e;
   }
 
   /* Начало: Кнопка меню, выпадающий список */
-  /* &-btn {
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-
-     &:hover {
-      svg,
-      svg::before,
-      svg::after {
-        fill: orange;
-      }
-    }
-
-    &:active {
-      & svg,
-      & svg::before,
-      & svg::after {
-        fill: red;
-      }
-    }
-
-    & svg {
-      &:before,
-      &:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #fff;
-        position: absolute;
-        top: -10px;
-        left: 0;
-      }
-
-      &:after {
-        top: 10px;
-      }
-    }
-  } */
 
   &-switch {
     display: none;
@@ -742,7 +721,8 @@ $brend_color2: #6f6e6e;
     }
 
     &-cart-btn {
-      width: 160px;
+      max-width: 160px;
+      width: 100%;
       padding: 10px;
 
       display: none;
@@ -768,7 +748,8 @@ $brend_color2: #6f6e6e;
     }
 
     &-button {
-      width: 212px;
+      max-width: 212px;
+      width: 100%;
       margin: 0 auto 0 auto;
 
       display: block;
@@ -820,6 +801,13 @@ $brend_color2: #6f6e6e;
     }
 
     &-sorting {
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      color: #6f6e6e;
+
       &-listing {
         display: flex;
         justify-content: space-between;
@@ -926,6 +914,7 @@ $brend_color2: #6f6e6e;
         &-trending {
           &-item {
             padding: 6px;
+            display: flex;
 
             &:hover {
               background: $brend_color;
@@ -953,6 +942,7 @@ $brend_color2: #6f6e6e;
         &-size {
           &-item {
             padding: 6px;
+            display: flex;
 
             &:hover {
               background: $brend_color;
@@ -978,8 +968,12 @@ $brend_color2: #6f6e6e;
         }
 
         &-price {
+          position: fixed;
+          right: 20px;
+
           &-item {
             padding: 6px;
+            display: flex;
 
             &:hover {
               background: $brend_color;
@@ -1090,7 +1084,7 @@ $brend_color2: #6f6e6e;
     /* Для адаптива, 
   что бы при уменьшении разрешения экрана 
   блоки сместились друг под другом*/
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 
     min-height: 448px;
     margin: 0 auto;
@@ -1098,7 +1092,8 @@ $brend_color2: #6f6e6e;
   }
 
   &-info {
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
 
     display: flex;
     justify-content: center;
@@ -1141,10 +1136,12 @@ $brend_color2: #6f6e6e;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 356px;
+    max-width: 356px;
+    width: 100%;
 
     &-wrp {
-      width: 557px;
+      max-width: 557px;
+      width: 100%;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -1298,10 +1295,13 @@ $brend_color2: #6f6e6e;
 @import "carusel.scss";
 @import "cart.scss";
 @import "registration.scss";
-
 @import "media.scss";
 
 @media (max-width: 768px) {
+  .display-none-768 {
+    display: none;
+  }
+
   .container {
     max-width: 736px;
   }
@@ -1327,14 +1327,19 @@ $brend_color2: #6f6e6e;
   }
 
   .products-item {
-    width: calc(100% / 2 - 24px - -16px / 2 - 0.01px);
+    width: calc(100% / 2 - 32px - -16px / 2 - 0.01px);
   }
 
+  .products-item {
+    margin: 0 16px 16px 0;
+  }
+
+  /* Возвращаем ранее установленные размеры к общим */
   .products-item:nth-child(1),
   .products-item:nth-child(4),
   .products-item:nth-child(7),
   .products-item:nth-child(10) {
-    margin: 0 0 16px 0;
+    margin: 0 16px 16px 0;
   }
 
   .products-item:nth-child(1),
@@ -1346,13 +1351,87 @@ $brend_color2: #6f6e6e;
     margin: 0 0 16px 16px;
   }
 
-  .products-item {
-    margin: 0 0 16px 16px;
-  }
-
   .products-item-header {
     width: 100%;
     margin: 0 0 30px 0;
+  }
+
+  .product-description-content-price {
+    width: 80%;
+  }
+
+  .products-cart {
+    flex-direction: column;
+    max-width: 100%;
+
+    & .checkout {
+      max-width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      & .checkout-adress-header {
+        max-width: 100%;
+        width: 100%;
+      }
+      & .checkout-adress {
+        width: 48%;
+        margin-bottom: 28px;
+      }
+      & .checkout-confirm {
+        width: 48%;
+        margin-left: 15px;
+        max-height: 214px;
+        height: 100%;
+      }
+    }
+
+    &-left {
+      max-width: 100%;
+      margin-bottom: 64px;
+    }
+
+    &-right {
+      max-width: 100%;
+    }
+
+    &-btns {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &-item {
+      height: 180px;
+      margin-bottom: 32px;
+
+      &-details {
+        margin: 13px 10px 0 17px;
+      }
+
+      &-header {
+        padding-bottom: 26px;
+
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      & .property {
+        font-size: 14px;
+        line-height: 17px;
+
+        & span {
+          margin-bottom: 4px;
+        }
+
+        & .quantity input {
+          max-width: 15px;
+          margin-left: 15px;
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
   }
 
   .categories-item {
@@ -1388,6 +1467,7 @@ $brend_color2: #6f6e6e;
   .subscribe-listing {
     justify-content: center;
     padding: 64px 0 219px 0;
+    flex-wrap: wrap;
   }
 
   .subscribe-info {
@@ -1399,6 +1479,10 @@ $brend_color2: #6f6e6e;
 }
 
 @media (max-width: 440px) {
+  .display-none-440 {
+    display: none;
+  }
+
   .container {
     max-width: 408px;
   }
@@ -1449,6 +1533,15 @@ $brend_color2: #6f6e6e;
     }
   }
 
+  .page-header-secondary-position {
+    flex-direction: column;
+    justify-content: center;
+
+    &-title {
+      margin-bottom: 32px;
+    }
+  }
+
   .categories {
     margin: 64px 16px 32px 16px;
 
@@ -1470,14 +1563,56 @@ $brend_color2: #6f6e6e;
   }
 
   .products {
+    margin-top: 24px;
+
+    &-header {
+      margin: 0 0 40px 0;
+    }
+
+    &-header-sorting {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
     &-listing {
-      margin: 0 -8px 10px -8px;
+      /* margin: 0 -8px 10px -8px; */
+      padding: 0 8px 10px 8px;
     }
 
     &-item {
       width: 100%;
       margin: 0 0 30px 0;
     }
+  }
+
+  .product-description-content-sorting {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .product-description-content-price {
+    width: 50%;
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+  }
+
+  .filter ~ label svg {
+    width: 37.5px;
+    height: 25px;
+  }
+
+  .filter ~ label span {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .products-item:nth-child(1),
+  .products-item:nth-child(3),
+  .products-item:nth-child(5),
+  .products-item:nth-child(7),
+  .products-item:nth-child(9),
+  .products-item:nth-child(11) {
+    margin: 0 0 16px 0;
   }
 
   .features {

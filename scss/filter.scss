@@ -10,8 +10,10 @@ $brend_color2: #6f6e6e;
     font-style: normal;
 }
 .products-header-inlineflex {
+    width: 100%;
     display: inline-flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 .products-header-filter {
@@ -25,7 +27,8 @@ $brend_color2: #6f6e6e;
 
     & form {
         display: block;
-        width: 395px;
+        max-width: 395px;
+        width: 100%;
         z-index: 50; /* не получается поднять над другими элементами */
         float: right;
         background-color: transparent;
@@ -86,7 +89,10 @@ $brend_color2: #6f6e6e;
         visibility: hidden;
         list-style: none;
 
-        width: 360px;
+        min-width: max-content;
+        max-width: 360px;
+        width: 100%;
+        margin-left: 8px;
         padding: 50px 20px 20px 20px;
 
         position: absolute;
@@ -152,6 +158,7 @@ $brend_color2: #6f6e6e;
             }
         }
     }
+
     &-sublist {
         display: flex;
         flex-direction: column;
@@ -161,6 +168,7 @@ $brend_color2: #6f6e6e;
         margin-top: 24px;
         list-style: none;
     }
+
     &-subitem {
         display: block;
         color: $brend_color2;

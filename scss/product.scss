@@ -58,7 +58,8 @@ $brend_color2: #6f6e6e;
             }
             &-txt {
                 display: block;
-                width: 565px;
+                max-width: 565px;
+                width: 100%;
                 margin-top: 48px;
                 text-align: center;
 
@@ -73,7 +74,15 @@ $brend_color2: #6f6e6e;
             }
 
             &-price {
+                max-width: 640px;
+                width: 100%;
+
                 margin-top: 32px;
+                padding-bottom: 64px;
+                margin-bottom: 64px;
+                border-bottom: 1px solid #eaeaea;
+
+                text-align: center;
 
                 font-family: Lato;
                 font-style: normal;
@@ -83,10 +92,8 @@ $brend_color2: #6f6e6e;
             }
 
             &-sorting {
-                width: 640px;
-                margin-top: 64px;
-                padding-top: 64px;
-                border-top: 1px solid #eaeaea;
+                max-width: 640px;
+                width: 100%;
 
                 &-listing {
                     justify-content: center;
@@ -106,7 +113,7 @@ $brend_color2: #6f6e6e;
                 }
 
                 & span {
-                    vertical-align: super;
+                    /* vertical-align: super; */
 
                     font-family: Lato;
                     font-style: normal;
