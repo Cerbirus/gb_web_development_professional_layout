@@ -30,9 +30,37 @@ ul {
 
 /* === Конец: ===  Обнуление ненужных стиле bootstap ===  */
 @font-face {
-  font-family: "Lato";
+  font-family: Lato;
   src: url("../fonts/Lato/Lato-Light.ttf");
-  font-weight: normal;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato/Lato-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato/Lato-Black.ttf");
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -67,7 +95,7 @@ ul {
 }
 
 .txt-bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .visibility-hidden {
@@ -336,7 +364,7 @@ ul {
 .menu-list-title {
   display: block;
   margin: 9px 0 24px 0;
-  font-weight: bold;
+  font-weight: 700;
   color: #000000;
   text-transform: uppercase;
 }
@@ -395,7 +423,7 @@ ul {
   font-style: normal;
   font-size: 14px;
   line-height: 17px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .page-header {
@@ -422,7 +450,7 @@ ul {
   background-image: url("../img/page-header-img-preview.png");
   background-repeat: no-repeat;
   background-position: right;
-  background-size: cover;
+  /* background-size: cover; */
   content: "";
 }
 
@@ -450,7 +478,7 @@ ul {
   border: 0px solid #6df174;
   display: block;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
@@ -517,7 +545,7 @@ ul {
 .page-header-txt {
   max-width: 400px;
   width: 100%;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 32px;
   line-height: 38px;
   margin: 0 0 0 0;
@@ -552,7 +580,7 @@ ul {
   width: calc(100% / 3 - 30px - -20px / 3 - 0.01px);
   border: 0px solid #6df174;
   margin: 0 0 30px 30px;
-  font-weight: normal;
+  font-weight: 400;
   /* Временное решение, пока не разберусь с размерами из background-image */
   height: 260px;
   display: -webkit-box;
@@ -626,7 +654,7 @@ ul {
 }
 
 .categories-item-text {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   text-align: center;
@@ -634,7 +662,7 @@ ul {
 }
 
 .categories-item-header {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
@@ -644,7 +672,7 @@ ul {
   margin-top: 51px;
   font-family: Lato;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
@@ -714,14 +742,14 @@ ul {
 }
 
 .products-item-header-title {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 30px;
   line-height: 36px;
   color: #222222;
 }
 
 .products-item-header-txt {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #9f9f9f;
@@ -740,7 +768,7 @@ ul {
 
 .products-item-details-header,
 .products-item-details h3 {
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
@@ -758,7 +786,7 @@ ul {
 .products-item-details-price,
 .products-item-details a {
   margin: 18px 0 0;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
 }
@@ -805,7 +833,7 @@ ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #fff;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   padding: 15px 35px;
@@ -842,7 +870,7 @@ ul {
 .products-header-title {
   font-family: Lato;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 30px;
   line-height: 36px;
 }
@@ -850,7 +878,7 @@ ul {
 .products-header-txt {
   font-family: Lato;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #9f9f9f;
@@ -859,7 +887,7 @@ ul {
 .products-header-sorting {
   font-family: Lato;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #6f6e6e;
@@ -1013,7 +1041,7 @@ ul {
   margin-left: 9px;
   text-transform: uppercase;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #6f6e6e;
@@ -1040,7 +1068,7 @@ ul {
   margin-left: 9px;
   text-transform: uppercase;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #6f6e6e;
@@ -1072,7 +1100,7 @@ ul {
   margin-left: 9px;
   text-transform: uppercase;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #6f6e6e;
@@ -1133,7 +1161,7 @@ ul {
   width: 100%;
   margin: 0 0 16px 0;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #fbfbfb;
@@ -1302,7 +1330,7 @@ ul {
   border-radius: 25px 0 0 25px;
   background-color: #e1e1e1;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #222224;
@@ -1324,7 +1352,7 @@ ul {
   border-radius: 0 25px 25px 0;
   /* Шрифт */
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 17px;
   color: #ffffff;
@@ -1366,7 +1394,7 @@ ul {
 
 .page-footer-txt {
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   color: #fbfbfb;
@@ -2469,6 +2497,9 @@ ul {
   }
   .page-header-index {
     height: 367px;
+  }
+  .page-header-index::before {
+    background-size: cover;
   }
   .products-listing {
     margin-bottom: 16px;

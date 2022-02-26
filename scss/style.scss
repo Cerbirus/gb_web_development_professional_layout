@@ -40,9 +40,37 @@ ul {
 .basic {
   @at-root {
     @font-face {
-      font-family: "Lato";
+      font-family: Lato;
       src: url("../fonts/Lato/Lato-Light.ttf");
-      font-weight: normal;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: Lato;
+      src: url("../fonts/Lato/Lato-Regular.ttf");
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: Lato;
+      src: url("../fonts/Lato/Lato-Regular.ttf");
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @font-face {
+      font-family: Lato;
+      src: url("../fonts/Lato/Lato-Bold.ttf");
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: Lato;
+      src: url("../fonts/Lato/Lato-Black.ttf");
+      font-weight: 900;
       font-style: normal;
     }
 
@@ -79,7 +107,7 @@ ul {
 
     .txt {
       &-bold {
-        font-weight: bold;
+        font-weight: 700;
       }
     }
 
@@ -305,7 +333,7 @@ ul {
     &-title {
       display: block;
       margin: 9px 0 24px 0;
-      font-weight: bold;
+      font-weight: 700;
       color: #000000;
       text-transform: uppercase;
     }
@@ -366,7 +394,7 @@ ul {
     font-style: normal;
     font-size: 14px;
     line-height: 17px;
-    font-weight: normal;
+    font-weight: 400;
   }
   /* Конец: Кнопка меню, выпадающий список */
 }
@@ -391,7 +419,7 @@ ul {
       background-image: url("../img/page-header-img-preview.png");
       background-repeat: no-repeat;
       background-position: right;
-      background-size: cover;
+      /* background-size: cover; */
       content: "";
     }
   }
@@ -414,7 +442,7 @@ ul {
         display: block;
 
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 24px;
         line-height: 29px;
 
@@ -481,7 +509,7 @@ ul {
   &-txt {
     max-width: 400px;
     width: 100%;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 32px;
     line-height: 38px;
     margin: 0 0 0 0;
@@ -511,7 +539,7 @@ ul {
     width: calc(100% / 3 - 30px - -20px / 3 - 0.01px);
     border: $border;
     margin: 0 0 30px 30px;
-    font-weight: normal;
+    font-weight: 400;
 
     /* Временное решение, пока не разберусь с размерами из background-image */
     height: 260px;
@@ -581,7 +609,7 @@ ul {
     }
 
     &-text {
-      font-weight: normal;
+      font-weight: 400;
       font-size: 16px;
       line-height: 19px;
       text-align: center;
@@ -590,7 +618,7 @@ ul {
     }
 
     &-header {
-      font-weight: bold;
+      font-weight: 700;
       font-size: 24px;
       line-height: 29px;
       text-align: center;
@@ -603,7 +631,7 @@ ul {
 
   font-family: Lato;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: #000000;
@@ -666,14 +694,14 @@ ul {
       text-align: center;
 
       &-title {
-        font-weight: normal;
+        font-weight: 400;
         font-size: 30px;
         line-height: 36px;
         color: #222222;
       }
 
       &-txt {
-        font-weight: normal;
+        font-weight: 400;
         font-size: 14px;
         line-height: 17px;
         color: #9f9f9f;
@@ -691,7 +719,7 @@ ul {
 
       &-header,
       & h3 {
-        font-weight: normal;
+        font-weight: 400;
         font-size: 13px;
         line-height: 16px;
         color: #000000;
@@ -709,7 +737,7 @@ ul {
       &-price,
       & a {
         margin: 18px 0 0;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 16px;
         line-height: 19px;
       }
@@ -756,7 +784,7 @@ ul {
       box-sizing: border-box;
       background-color: #fff;
 
-      font-weight: normal;
+      font-weight: 400;
       font-size: 16px;
       line-height: 19px;
       padding: 15px 35px;
@@ -786,7 +814,7 @@ ul {
     &-title {
       font-family: Lato;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 30px;
       line-height: 36px;
     }
@@ -794,7 +822,7 @@ ul {
     &-txt {
       font-family: Lato;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 14px;
       line-height: 17px;
       color: #9f9f9f;
@@ -803,7 +831,7 @@ ul {
     &-sorting {
       font-family: Lato;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 14px;
       line-height: 17px;
       color: #6f6e6e;
@@ -931,7 +959,7 @@ ul {
               margin-left: 9px;
               text-transform: uppercase;
               font-style: normal;
-              font-weight: normal;
+              font-weight: 400;
               font-size: 14px;
               line-height: 16px;
               color: $brend_color2;
@@ -959,7 +987,7 @@ ul {
               margin-left: 9px;
               text-transform: uppercase;
               font-style: normal;
-              font-weight: normal;
+              font-weight: 400;
               font-size: 14px;
               line-height: 16px;
               color: $brend_color2;
@@ -990,7 +1018,7 @@ ul {
               margin-left: 9px;
               text-transform: uppercase;
               font-style: normal;
-              font-weight: normal;
+              font-weight: 400;
               font-size: 14px;
               line-height: 16px;
               color: $brend_color2;
@@ -1043,7 +1071,7 @@ ul {
       margin: 0 0 16px 0;
 
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 20px;
       line-height: 24px;
       color: #fbfbfb;
@@ -1188,7 +1216,7 @@ ul {
 
       background-color: #e1e1e1;
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 14px;
       line-height: 17px;
       color: #222224;
@@ -1209,7 +1237,7 @@ ul {
 
       /* Шрифт */
       font-style: normal;
-      font-weight: normal;
+      font-weight: 400;
       font-size: 14px;
       line-height: 17px;
       color: #ffffff;
@@ -1245,7 +1273,7 @@ ul {
 
   &-txt {
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 19px;
 
@@ -1319,6 +1347,10 @@ ul {
 
     &-index {
       height: 367px;
+
+      &::before {
+        background-size: cover;
+      }
     }
   }
 
