@@ -996,9 +996,6 @@ ul {
         }
 
         &-price {
-          position: fixed;
-          right: 20px;
-
           &-item {
             padding: 6px;
             display: flex;
@@ -1358,11 +1355,25 @@ ul {
     margin-bottom: 16px;
   }
 
-  .products-item {
-    width: calc(100% / 2 - 32px - -16px / 2 - 0.01px);
+  .products {
+    &-header {
+      &-inlineflex {
+        justify-content: end;
+      }
+
+      &-sorting {
+        &-item {
+          &-price {
+            position: fixed;
+            right: 20px;
+          }
+        }
+      }
+    }
   }
 
   .products-item {
+    width: calc(100% / 2 - 32px - -16px / 2 - 0.01px);
     margin: 0 16px 16px 0;
   }
 

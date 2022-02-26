@@ -17,15 +17,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  /* justify-content: space-between; */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
 .products-header-filter {
-  position: relative;
+  position: absolute;
   z-index: 50;
-  margin-right: auto;
+  /* margin-right: auto; */
+  left: 0px;
 }
 
 .products-header-filter input[type="checkbox"] {

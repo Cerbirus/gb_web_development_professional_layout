@@ -9,17 +9,21 @@ $brend_color2: #6f6e6e;
     font-weight: normal;
     font-style: normal;
 }
+
 .products-header-inlineflex {
     width: 100%;
     display: inline-flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
+    position: relative;
 }
 
 .products-header-filter {
-    position: relative;
+    position: absolute;
     z-index: 50;
-    margin-right: auto;
+    /* margin-right: auto; */
+    left: 0px;
 
     & input[type="checkbox"] {
         display: none;
